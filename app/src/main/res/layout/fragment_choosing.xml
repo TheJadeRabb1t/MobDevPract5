@@ -39,12 +39,12 @@
 
         <EditText
             android:id="@+id/chooser"
-            android:layout_width="246dp"
-            android:layout_height="48dp"
+            android:layout_width="140dp"
+            android:layout_height="39dp"
             android:layout_marginBottom="124dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Please choose who are you"
+            android:text="Enter or register"
             app:layout_constraintBottom_toTopOf="@+id/coach_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
