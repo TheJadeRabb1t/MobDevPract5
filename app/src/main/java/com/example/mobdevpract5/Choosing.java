@@ -25,7 +25,7 @@ public class Choosing extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_choosing, container, false);
-        view.findViewById(R.id.sportsman_button).setOnClickListener(v -> {
+        view.findViewById(R.id.registration_button).setOnClickListener(v -> {
             Bundle bundle = new Bundle();
             bundle.putString("buttonPressing", "1");
             Navigation.findNavController(view).navigate(R.id.action_choosing_to_registration, bundle);

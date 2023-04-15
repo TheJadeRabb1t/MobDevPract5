@@ -36,7 +36,7 @@
             tools:ignore="MissingConstraints">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/surname"
+                android:id="@+id/Surname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/surname" />
@@ -52,7 +52,7 @@
             tools:ignore="MissingConstraints">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email"
+                android:id="@+id/Email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/e_mail" />

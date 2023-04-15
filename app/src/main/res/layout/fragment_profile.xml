@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
-            android:id="@+id/sporstmanName"
+            android:id="@+id/name"
             android:layout_width="158dp"
             android:layout_height="51dp"
             android:text="@string/name"
@@ -22,7 +22,7 @@
             app:layout_constraintVertical_bias="0.18" />
 
         <TextView
-            android:id="@+id/sporstmanSurname"
+            android:id="@+id/surname"
             android:layout_width="160dp"
             android:layout_height="45dp"
             android:text="@string/surname"
@@ -34,7 +34,7 @@
             app:layout_constraintVertical_bias="0.274" />
 
         <TextView
-            android:id="@+id/sportmanEmail"
+            android:id="@+id/email"
             android:layout_width="173dp"
             android:layout_height="55dp"
             android:text="@string/e_mail"
