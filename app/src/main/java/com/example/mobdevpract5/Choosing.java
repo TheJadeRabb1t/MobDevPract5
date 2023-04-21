@@ -1,6 +1,9 @@
 package com.example.mobdevpract5;
 
 import android.annotation.SuppressLint;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.core.app.NotificationCompat;
@@ -27,6 +30,19 @@ public class Choosing extends Fragment {
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(getContext());
         notificationManagerCompat.notify(NOTIFY_ID, builder.build());
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "Channel name",
+                    NotificationManager.IMPORTANCE_DEFAULT);
+            channel.setDescription("Channel description");
+            NotificationManager notificationManager = getActivity().getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
+
 
     public Choosing() {
     }
