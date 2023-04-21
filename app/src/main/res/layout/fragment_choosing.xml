@@ -49,5 +49,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/notificationButton"
+            android:layout_width="154dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="180dp"
+            android:text="Notification"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="138dp"
+            tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
