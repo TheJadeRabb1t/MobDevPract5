@@ -16,13 +16,14 @@
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />
         <service
-            android:name=".MyService"
+            android:name=".UI.views.MyService"
             android:enabled="true"
             android:exported="true"
-            android:permission="TODO"></service>
+            android:permission="TODO">
+        </service>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.views.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

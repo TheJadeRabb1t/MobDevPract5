@@ -1,4 +1,4 @@
-package com.example.mobdevpract5;
+package com.example.mobdevpract5.UI.views;
 
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
@@ -14,6 +14,8 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.mobdevpract5.R;
 
 public class Choosing extends Fragment {
     private static final int NOTIFY_ID = 0;
