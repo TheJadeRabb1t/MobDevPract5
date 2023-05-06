@@ -20,6 +20,7 @@ import com.example.mobdevpract5.UI.viewModels.MyViewModel;
 import com.example.mobdevpract5.UI.viewModels.RegistrationViewModelSecond;
 import com.example.mobdevpract5.UI.viewModels.RegistrationViewModels;
 import com.example.mobdevpract5.data.DataSource.room.MySharedPreferences;
+import com.example.mobdevpract5.databinding.RecyclerViewFragmentBinding;
 import com.google.android.material.textfield.TextInputEditText;
 
 import org.jetbrains.annotations.Nullable;

@@ -8,6 +8,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mobdevpract5.data.models.Hotels;
+import com.example.mobdevpract5.databinding.ItemViewBinding;
+
+
 
 import java.util.ArrayList;
 import java.util.List;
