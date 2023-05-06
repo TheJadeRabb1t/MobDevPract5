@@ -2,7 +2,7 @@ package com.example.mobdevpract5.data.repositories;
 
 import androidx.lifecycle.LiveData;
 
-import com.example.mobdevpract5.data.DataSource.UsersDataSource;
+import com.example.mobdevpract5.data.DataSource.room.UsersDataSource;
 import com.example.mobdevpract5.data.models.User;
 
 import java.util.List;

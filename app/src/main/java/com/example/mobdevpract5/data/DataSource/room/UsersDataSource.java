@@ -1,4 +1,4 @@
-package com.example.mobdevpract5.data.DataSource;
+package com.example.mobdevpract5.data.DataSource.room;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
