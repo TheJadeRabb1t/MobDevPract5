@@ -1,24 +1,23 @@
 package com.example.mobdevpract5.UI.views;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.example.mobdevpract5.R;
+import com.example.mobdevpract5.UI.viewModels.ExternalStorageViewModel;
 
 public class Profile extends Fragment {
 
     public Profile() {
     }
-
-
 
     public static Profile newInstance() {
         Profile fragment = new Profile();
@@ -49,7 +48,10 @@ public class Profile extends Fragment {
             nameView.setText(bundle.get("name").toString());
             surnameView.setText(bundle.get("surname").toString());
             emailView.setText(bundle.get("email").toString());
-
+            ExternalStorageViewModel externalStorageViewModel;
+            externalStorageViewModel = new ViewModelProvider(this).get(ExternalStorageViewModel.class);
+            String fileName = nameView.getText().toString() + " " + surnameView.getText().toString();
+            externalStorageViewModel.saveFileToExternalStorage(fileName, emailView.getText().toString().getBytes());
         }
     }
 }

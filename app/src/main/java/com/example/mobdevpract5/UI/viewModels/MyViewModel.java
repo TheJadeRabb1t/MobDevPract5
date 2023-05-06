@@ -1,8 +1,10 @@
 package com.example.mobdevpract5.UI.viewModels;
 
+import androidx.lifecycle.ViewModel;
+
 import com.example.mobdevpract5.data.repositories.MyRepository;
 
-public class MyViewModel {
+public class MyViewModel extends ViewModel {
     private MyRepository myRepository;
 
     public MyViewModel(MyRepository myRepository) {

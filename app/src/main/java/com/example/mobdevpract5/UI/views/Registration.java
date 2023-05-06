@@ -15,9 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.mobdevpract5.R;
 import com.example.mobdevpract5.UI.adapters.RecyclerViewAdapter;
-import com.example.mobdevpract5.UI.viewModels.ExternalStorageViewModel;
 import com.example.mobdevpract5.UI.viewModels.MyViewModel;
-import com.example.mobdevpract5.UI.viewModels.RegistrationViewModelSecond;
 import com.example.mobdevpract5.UI.viewModels.RegistrationViewModels;
 import com.example.mobdevpract5.data.DataSource.room.MySharedPreferences;
 import com.example.mobdevpract5.databinding.RecyclerViewFragmentBinding;
@@ -33,12 +31,6 @@ public class Registration extends Fragment {
     RecyclerViewFragmentBinding mBinding;
     RegistrationViewModels mRegistrationViewModels;
 
-    RegistrationViewModelSecond modelSecond;
-
-    private MySharedPreferences mPreferences;
-
-    private MyViewModel myViewModel;
-
     public Registration() {
         // Required empty public constructor
     }
@@ -50,19 +42,7 @@ public class Registration extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        //appSpecificStorage
-        modelSecond = new ViewModelProvider(this).get(RegistrationViewModelSecond.class);
-        modelSecond.getData().observe(this, myData -> {
-        });
-
-        //externalStorage
-        ExternalStorageViewModel externalStorageViewModel = new ViewModelProvider(this).get(ExternalStorageViewModel.class);
-        externalStorageViewModel.saveFileToExternalStorage("example.txt", "Hello world".getBytes());
-
         //sharedPreference
-        MyViewModel myViewModel = new ViewModelProvider(this).get(MyViewModel.class);
-        myViewModel.saveData("key", "value");
-        String data = myViewModel.getData("key", "default value");
         super.onCreate(savedInstanceState);
     }
 

@@ -5,21 +5,23 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
+
 import com.example.mobdevpract5.R;
+import com.example.mobdevpract5.UI.viewModels.RegistrationViewModelSecond;
 
 public class Choosing extends Fragment {
     private static final int NOTIFY_ID = 0;
     private final String CHANNEL_ID = "channel_id";
+    RegistrationViewModelSecond modelSecond;
     View view;
 
     @SuppressLint("MissingPermission")
@@ -65,6 +67,9 @@ public class Choosing extends Fragment {
         });
         view.findViewById(R.id.notificationButton).setOnClickListener(v ->{
             showNotification();
+        });
+        modelSecond = new ViewModelProvider(this).get(RegistrationViewModelSecond.class);
+        modelSecond.getData().observe(getViewLifecycleOwner(), myData -> {
         });
         return view;
     }

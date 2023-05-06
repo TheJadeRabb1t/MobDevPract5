@@ -1,10 +1,12 @@
 package com.example.mobdevpract5.UI.viewModels;
 
+import androidx.lifecycle.ViewModel;
+
 import com.example.mobdevpract5.data.repositories.ExternalStorageRepository;
 
 import java.io.IOException;
 
-public class ExternalStorageViewModel {
+public class ExternalStorageViewModel extends ViewModel {
     private ExternalStorageRepository externalStorageRepository;
 
     public ExternalStorageViewModel() {
