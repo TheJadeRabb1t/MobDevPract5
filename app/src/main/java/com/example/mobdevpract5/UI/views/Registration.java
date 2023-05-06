@@ -14,6 +14,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.mobdevpract5.R;
+import com.example.mobdevpract5.UI.adapters.RecyclerViewAdapter;
 import com.example.mobdevpract5.UI.viewModels.ExternalStorageViewModel;
 import com.example.mobdevpract5.UI.viewModels.MyViewModel;
 import com.example.mobdevpract5.UI.viewModels.RegistrationViewModelSecond;
@@ -51,13 +52,11 @@ public class Registration extends Fragment {
         //appSpecificStorage
         modelSecond = new ViewModelProvider(this).get(RegistrationViewModelSecond.class);
         modelSecond.getData().observe(this, myData -> {
-            //some logic
         });
 
         //externalStorage
         ExternalStorageViewModel externalStorageViewModel = new ViewModelProvider(this).get(ExternalStorageViewModel.class);
         externalStorageViewModel.saveFileToExternalStorage("example.txt", "Hello world".getBytes());
-
 
         //sharedPreference
         MyViewModel myViewModel = new ViewModelProvider(this).get(MyViewModel.class);
