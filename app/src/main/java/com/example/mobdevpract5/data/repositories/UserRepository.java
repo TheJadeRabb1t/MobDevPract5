@@ -1,5 +1,7 @@
 package com.example.mobdevpract5.data.repositories;
 
+import android.app.Application;
+
 import androidx.lifecycle.LiveData;
 
 import com.example.mobdevpract5.data.DataSource.UsersDataSource;
@@ -9,16 +11,15 @@ import java.util.List;
 
 public class UserRepository {
     private UsersDataSource usersDataSource;
-    private User user;
-    public UserRepository(User user) {
-        this.user = user;
+    public UserRepository(Application application) {
+        this.usersDataSource = new UsersDataSource();
     }
 
     public LiveData<List<User>> getUser() {
         return usersDataSource.items();
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(Application application) {
+        this.usersDataSource = usersDataSource;
     }
 }
